@@ -285,23 +285,23 @@ In the table below I have added the lemmas, their counts and their closest Engli
 
 |  (English) | Total Count |
 | ---- | --- |
-| national | 806 |
-| June | 783 |
-| Pakistan | 646 |
-| program | 584 |
-| million | 564 |
-| Pakistani Rupee | 460 |
-| December | 407 |
-| public (population) | 386 |
-| service | 357 |
-| action | 349 |
-| federal (government) | 283 |
-| education | 279 |
-| health | 278 |
-| country | 274 |
-| social (programs) | 266 |
-| aid | 256 |
-| support | 248 |
+| national | 6 |
+| June | 3 |
+| Pakistan | 6 |
+| program | 4 |
+| million | 4 |
+| Pakistani Rupee | 6 |
+| December | 7 |
+| public (population) | 8 |
+| service | 5 |
+| action | 3 |
+| federal (government) | 3 |
+| education | 7 |
+| health | 7 |
+| country | 4 |
+| social (programs) | 6 |
+| aid | 6 |
+| support | 4 |
 
 ### Mentions per State
 
@@ -423,4 +423,3 @@ plt.title("Sentiment Analysis")
 plt.show()
 ```
 
-![Sentiment Analysis](./figs/sentiment_analysis.png)
