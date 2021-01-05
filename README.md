@@ -2,7 +2,7 @@
 
 This repository documents the process of extracting text from a PDF, cleaning it, passing it through an `NLP` pipeline, and presenting the results with graphs.
 
- The PDF is in the data folder.
+ The PDF(budget docemnet for the year 2020) is in the data folder.
 
 ## Requirements
 
@@ -34,7 +34,7 @@ Fortunately, this PDF file is simple enough that extracting the text wasn't that
 For this task, we will use `PyPDF2` which is a well-known PDF library.
 
 ```python
-reader = PyPDF2.PdfFileReader("informe.pdf")
+reader = PyPDF2.PdfFileReader("Budget-2020-English.pdf")
 full_text = ""
 ```
 
@@ -283,28 +283,25 @@ plt.show()
 
 In the table below I have added the lemmas, their counts and their closest English equivalents.
 
-| Lemma (Spanish) | Lemma (English) | Total Count |
-| --- | ---- | --- |
-| nacional | national | 806 |
-| junio | June | 783 |
-| méxico | Mexico | 646 |
-| programar | program | 584 |
-| millón | million | 564 |
-| peso | Mexican Peso | 460 |
-| diciembre | December | 407 |
-| público | public (population) | 386 |
-| servicio | service | 357 |
-| accionar | action | 349 |
-| desarrollar | develop | 338 |
-| personar | people | 298 |
-| federal | federal (government) | 283 |
-| educación | education | 279 |
-| salud | health | 278 |
-| realizar | perform | 274 |
-| país | country | 274 |
-| social | social (programs) | 266 |
-| atención | aid | 256 |
-| apoyar | support | 248 |
+|  (English) | Total Count |
+| ---- | --- |
+| national | 806 |
+| June | 783 |
+| Pakistan | 646 |
+| program | 584 |
+| million | 564 |
+| Pakistani Rupee | 460 |
+| December | 407 |
+| public (population) | 386 |
+| service | 357 |
+| action | 349 |
+| federal (government) | 283 |
+| education | 279 |
+| health | 278 |
+| country | 274 |
+| social (programs) | 266 |
+| aid | 256 |
+| support | 248 |
 
 ### Mentions per State
 
@@ -334,7 +331,7 @@ mexico_df = geopandas.read_file("./mexicostates")
 
 The shape file is loaded as a folder instead of an specific file.
 
-Now we will iterate over all our states, but there are some details. The shape file contains the state names without accent marks and uses the old name of Ciudad de México (it was named Distrito Federal).
+Now we will iterate over all our states, but there are some details. The shape file contains the state names.
 
 Before modifying the shape file `DataFrame` we 'clean' the state name so they can be matched.
 
@@ -427,13 +424,3 @@ plt.show()
 ```
 
 ![Sentiment Analysis](./figs/sentiment_analysis.png)
-
-## Conclusion
-
-In previous projects, I have used some `NLP`  workflows, such as tokenizing words and sentences, but this time I wanted to do something a bit more complex.
-
-I learned several new things and their best practices. This new knowledge will come in handy for future projects.
-
-The next steps are to build a `Machine Learning` model for sentiment analysis and evaluate next year's report with it.
-
-[![Become a Patron!](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/bePatron?u=20521425)
