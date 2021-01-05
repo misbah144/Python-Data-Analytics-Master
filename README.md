@@ -1,8 +1,8 @@
-# Mexican Government Report Text Analysis
+# Python Based Report Text Analysis
 
 This repository documents the process of extracting text from a PDF, cleaning it, passing it through an `NLP` pipeline, and presenting the results with graphs.
 
-The PDF is the government report of 2019 that was released on September 1st. The PDF is in the data folder.
+ The PDF is in the data folder.
 
 ## Requirements
 
@@ -25,9 +25,7 @@ conda install -c conda-forge descartes
 
 ## PDF Extraction
 
-The government report that we will process can be downloaded from the following url: https://www.gob.mx/primerinforme
-
-For your convenience I have added the PDF file in the data folder.
+For  convenience I have added the PDF file in the data folder.
 
 Extracting text from PDF files is a bit unreliable, you lose the original formatting and there are times you don't get any text at all.
 
