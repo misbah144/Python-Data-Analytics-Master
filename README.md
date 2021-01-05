@@ -279,7 +279,6 @@ plt.title("Most Frequent Words")
 plt.show()
 ```
 
-![Most Used Words](./figs/words_counts.png)
 
 In the table below I have added the lemmas, their counts and their closest English equivalents.
 
